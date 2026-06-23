@@ -1,0 +1,8 @@
+# Goal
+float32 value
+---
+# Result
+bool success
+string message
+---
+# Feedback (vuoto)

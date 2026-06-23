@@ -1,0 +1,12 @@
+# Goal
+float32 position_mm
+float32 speed
+float32 force
+---
+# Result
+bool success
+string message
+float32 current_position_mm
+uint8 object_detection_status
+---
+# Feedback (vuoto)
