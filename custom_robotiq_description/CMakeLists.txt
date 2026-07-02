@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(robotiq_description)
+project(custom_robotiq_description)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -12,7 +12,6 @@ install(
   DIRECTORY
     config
     launch
-    meshes
     rviz
     urdf
   DESTINATION

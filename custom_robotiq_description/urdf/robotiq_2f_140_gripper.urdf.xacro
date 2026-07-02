@@ -5,7 +5,7 @@
     <xacro:arg name="com_port" default="/dev/ttyUSB0" />
 
     <!-- Import macros -->
-    <xacro:include filename="$(find robotiq_description)/urdf/robotiq_2f_140_macro.urdf.xacro" />
+    <xacro:include filename="$(find custom_robotiq_description)/urdf/robotiq_2f_140_macro.urdf.xacro" />
 
     <link name="world" />
     <xacro:robotiq_gripper name="RobotiqGripperHardwareInterface" prefix="" parent="world" use_fake_hardware="$(arg use_fake_hardware)" com_port="$(arg com_port)">

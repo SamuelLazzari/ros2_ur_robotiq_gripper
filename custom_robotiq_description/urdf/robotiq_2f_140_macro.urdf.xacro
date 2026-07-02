@@ -20,7 +20,7 @@
         gripper_closed_position:=0.695">
 
         <!-- ros2 control include -->
-        <xacro:include filename="$(find robotiq_description)/urdf/2f_140.ros2_control.xacro" />
+        <xacro:include filename="$(find custom_robotiq_description)/urdf/2f_140.ros2_control.xacro" />
         <!-- if we are simulating or directly communicating with the gripper we need a ros2 control instance -->
         <xacro:if value="${include_ros2_control}">
             <xacro:robotiq_gripper_ros2_control
