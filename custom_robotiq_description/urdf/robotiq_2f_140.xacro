@@ -155,7 +155,8 @@
       <parent link="${prefix}robotiq_140_base_link" />
       <child link="${prefix}left_outer_knuckle" />
       <axis xyz="-1 0 0" />
-      <limit lower="-0.07" upper="0.7" velocity="2.0" effort="1000" /> // edited lower limit
+      <!-- Edited lower limit to -0.07 -->
+      <limit lower="-0.07" upper="0.7" velocity="2.0" effort="1000" />
     </joint>
     <xacro:finger_joints prefix="${prefix}" fingerprefix="left" reflect="1.0"/>
   </xacro:macro>

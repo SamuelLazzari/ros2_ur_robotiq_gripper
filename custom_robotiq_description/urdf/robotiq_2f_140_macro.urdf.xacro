@@ -76,7 +76,7 @@
       </joint>
 
       <!-- Include the finger xacros and run them -->
-      <xacro:include filename="$(find robotiq_description)/urdf/robotiq_2f_140.xacro" />
+      <xacro:include filename="$(find custom_robotiq_description)/urdf/robotiq_2f_140.xacro" />
       <xacro:finger_links prefix="${prefix}" fingerprefix="left" stroke="140"/>
       <xacro:finger_links prefix="${prefix}" fingerprefix="right" stroke="140"/>
       <xacro:finger_joint prefix="${prefix}"/>
