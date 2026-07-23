@@ -5,6 +5,12 @@ from launch.substitutions import Command
 from ament_index_python.packages import get_package_share_directory
 import os
 
+#### CHANGE HERE #### 
+robot_ip = ""
+robot_port = 63352
+verbose = True
+#####################
+
 def generate_launch_description():
     # Definiamo i percorsi
     custom_desc_share = get_package_share_directory('custom_robotiq_description')
@@ -36,9 +42,9 @@ def generate_launch_description():
             executable='robotiq_gripper_server',
             name='robotiq_gripper_server',
             parameters=[{
-                'robot_ip': '160.78.27.23',
-                'robot_port': 63352,
-                'verbose': True,
+                'robot_ip': robot_ip,
+                'robot_port': robot_port,
+                'verbose': verbose,
             }]
         ),
 

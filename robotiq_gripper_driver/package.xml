@@ -11,6 +11,8 @@
   <depend>rclcpp</depend>
   <depend>rclcpp_action</depend>
   <depend>robotiq_gripper_msgs</depend>
+  <depend>custom_robotiq_description</depend>
+  <depend>robotiq_description</depend>
 
   <depend>ament_index_cpp</depend> 
 
