@@ -6,3 +6,6 @@ log/
 # System/IDE files
 .vscode/
 *.swp
+
+# Git files
+token
