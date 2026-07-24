@@ -84,14 +84,11 @@ GripperServer::GripperServer()
   RCLCPP_INFO(get_logger(), "Robotiq Gripper Server ready.");
 }
 
-/* ===================== CALIBRAZIONE ===================== */
 #include <fstream>
 #include <ament_index_cpp/get_package_share_directory.hpp>
 
-/* ===================== CALIBRAZIONE ===================== */
 void GripperServer::calibrate()
 {
-  // Prima prova a caricare dal file
   if (load_calibration()) {
     RCLCPP_INFO(get_logger(),
       "Calibration loaded from file → open=%.2f | closed=%.2f",
@@ -99,7 +96,6 @@ void GripperServer::calibrate()
     return;
   }
 
-  // File non trovato o invalido → calibrazione fisica
   RCLCPP_WARN(get_logger(), "No calibration file found, running physical calibration...");
 
   if (!gripper_->isActive()) {
@@ -145,7 +141,6 @@ void GripperServer::calibrate()
     raw_open_, raw_closed_, raw_closed_ - raw_open_);
 }
 
-/* ===================== LOAD CALIBRAZIONE ===================== */
 bool GripperServer::load_calibration()
 {
   std::string share_dir =
@@ -174,7 +169,6 @@ bool GripperServer::load_calibration()
   return true;
 }
 
-/* ===================== CONVERSIONI ===================== */
 double GripperServer::to_mm(double raw)
 {
   double mm = (raw - raw_closed_) / (raw_open_ - raw_closed_) * max_pos_;
@@ -186,7 +180,6 @@ double GripperServer::from_mm(double mm)
   return raw_closed_ + (mm / max_pos_) * (raw_open_ - raw_closed_);
 }
 
-/* ===================== UTILITY ===================== */
 std::string GripperServer::get_status_string(int status)
 {
   switch (status) {

@@ -15,10 +15,8 @@ launch_robot_state_publisher= False
 #####################
 
 def generate_launch_description():
-    # Definiamo i percorsi
     custom_desc_share = get_package_share_directory('custom_robotiq_description')
 
-    # Comando per processare il file Xacro
     robot_description_content = Command([
         'xacro ',
         os.path.join(custom_desc_share, 'urdf', 'robotiq_2f_140_gripper.urdf.xacro')
