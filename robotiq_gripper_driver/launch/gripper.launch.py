@@ -7,7 +7,7 @@ from ament_index_python.packages import get_package_share_directory
 import os
 
 #### CHANGE HERE #### 
-robot_ip = "160.78.27.23"
+robot_ip = "xxx.xx.xx.xx"
 robot_port = 63352
 verbose = True
 launch_rviz= False
