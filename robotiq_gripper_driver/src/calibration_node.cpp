@@ -13,7 +13,7 @@ class CalibrationNode : public rclcpp::Node
 public:
   CalibrationNode() : Node("robotiq_calibration_node")
   {
-    this->declare_parameter<std::string>("robot_ip",   "160.78.27.23");
+    this->declare_parameter<std::string>("robot_ip",   "xxx.xx.xx.xx");
     this->declare_parameter<int>        ("robot_port", 63352);
     this->declare_parameter<bool>       ("verbose",    true);
 
